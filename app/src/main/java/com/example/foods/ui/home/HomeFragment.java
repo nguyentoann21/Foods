@@ -1,5 +1,6 @@
 package com.example.foods.ui.home;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,18 +16,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.foods.R;
 import com.example.foods.adapters.HomeHorizontalAdapter;
 import com.example.foods.adapters.HomeVerticalAdapter;
+import com.example.foods.adapters.IUpdateVerticalRecycle;
 import com.example.foods.models.HomeHorizontalModel;
 import com.example.foods.models.HomeVerticalModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements IUpdateVerticalRecycle {
 
     RecyclerView homeHorizontalRecycle, homeVerticalRecycle;
-    List<HomeHorizontalModel> homeHorizontalModelList;
-    List<HomeVerticalModel>homeVerticalModelList;
+    ArrayList<HomeHorizontalModel> homeHorizontalModelList;
+    ArrayList<HomeVerticalModel>homeVerticalModelList;
     HomeHorizontalAdapter homeHorizontalAdapter;
     HomeVerticalAdapter homeVerticalAdapter;
 
@@ -45,7 +46,7 @@ public class HomeFragment extends Fragment {
             homeHorizontalModelList.add(new HomeHorizontalModel(R.drawable.iced_coffee, "Iced Coffee"));
             homeHorizontalModelList.add(new HomeHorizontalModel(R.drawable.cocktail, "Cocktail"));
 
-            homeHorizontalAdapter = new HomeHorizontalAdapter(getActivity(), homeHorizontalModelList);
+            homeHorizontalAdapter = new HomeHorizontalAdapter(this, getActivity(), homeHorizontalModelList);
             homeHorizontalRecycle.setAdapter(homeHorizontalAdapter);
 
             homeHorizontalRecycle.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
@@ -53,28 +54,21 @@ public class HomeFragment extends Fragment {
             homeHorizontalRecycle.setHasFixedSize(true);
             homeHorizontalRecycle.setNestedScrollingEnabled(false);
 
-
-
-
             homeVerticalRecycle = root.findViewById(R.id.home_recycle_vertical);
             homeVerticalModelList = new ArrayList<>();
-
-            //add data static
-            homeVerticalModelList.add(new HomeVerticalModel(R.drawable.pizza_item, "Pizza", "100"));
-            homeVerticalModelList.add(new HomeVerticalModel(R.drawable.hamburger_item, "Hamburger","120"));
-            homeVerticalModelList.add(new HomeVerticalModel(R.drawable.ramen_item, "Ramen", "80"));
-            homeVerticalModelList.add(new HomeVerticalModel(R.drawable.bubble_tea_item, "Bubble Tea", "50"));
-            homeVerticalModelList.add(new HomeVerticalModel(R.drawable.coffee, "Iced Coffee", "55"));
-            homeVerticalModelList.add(new HomeVerticalModel(R.drawable.cocktail_item, "Cocktail","60"));
-
             homeVerticalAdapter = new HomeVerticalAdapter(getActivity(), homeVerticalModelList);
             homeVerticalRecycle.setAdapter(homeVerticalAdapter);
 
             homeVerticalRecycle.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
 
-            homeVerticalRecycle.setHasFixedSize(true);
-            homeVerticalRecycle.setNestedScrollingEnabled(false);
-
         return root;
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    @Override
+    public void callBack(int position, ArrayList<HomeVerticalModel> list) {
+        homeVerticalAdapter = new HomeVerticalAdapter(getContext(), list);
+        homeVerticalAdapter.notifyDataSetChanged();
+        homeVerticalRecycle.setAdapter(homeVerticalAdapter);
     }
 }

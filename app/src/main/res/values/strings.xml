@@ -44,4 +44,27 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="description_for_products">Description for products</string>
+    <string name="category">Category</string>
+    <string name="avatar_image">Avatar Image</string>
+    <string name="search">Search</string>
+    <string name="user">User</string>
+    <string name="welcome_to_our_restaurant">Welcome to our restaurant!!!</string>
+    <string name="background_profile">Background Profile</string>
+    <string name="profile_title">Profile</string>
+    <string name="username_or_UserId">userId/username</string>
+    <string name="full_name">FullName</string>
+    <string name="address">Address</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="name">name</string>
+    <string name="location">location</string>
+    <string name="domain_domain_com">domain@domain.com</string>
+    <string name="_0909098999">0909098999</string>
+    <string name="change_password">Change Password</string>
+    <string name="pizza">Pizza</string>
+    <string name="_120">120</string>
+    <string name="unit_price">$</string>
+    <string name="all_pizza">All Pizza</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="image_menu">Image Menu</string>
 </resources>

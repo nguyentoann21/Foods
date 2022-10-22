@@ -32,7 +32,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="80dp"
             android:background="@drawable/top_left_radius"
             app:layout_constraintBottom_toBottomOf="@+id/img_vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -45,50 +45,41 @@
                 android:id="@+id/txt_vertical_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pizza"
+                android:layout_marginStart="48dp"
+                android:text="@string/pizza"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/blue"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.195"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.511" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/txt_vertical_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="120.00"
+                android:layout_marginEnd="4dp"
+                android:text="@string/_120"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/blue"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.702"
-                app:layout_constraintStart_toEndOf="@+id/txt_vertical_name"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.511" />
+                app:layout_constraintEnd_toStartOf="@+id/txt_vertical_unitPrice"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
+            <ImageView
+                android:contentDescription="@string/unit_price"
                 android:id="@+id/txt_vertical_unitPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="56dp"
+                android:background="@drawable/ic_dollar"
+                android:backgroundTint="@color/blue"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/txt_vertical_price"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.527" />
-
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
