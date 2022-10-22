@@ -12,10 +12,9 @@
         android:orientation="horizontal">
 
         <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/img_detail"
+            android:id="@+id/img_detail_cart"
             android:layout_width="150dp"
-            android:minHeight="120dp"
-            android:layout_height="match_parent"
+            android:layout_height="120dp"
             android:layout_margin="5dp"
             android:src="@drawable/iced_coffee"
             android:scaleType="centerCrop"
@@ -23,14 +22,14 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_gravity="center"
+            android:gravity="center"
             android:background="@color/silver"
             android:layout_marginStart="5dp">
 
             <TextView
-                android:id="@+id/detail_item_name"
+                android:id="@+id/cart_item_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/name"
@@ -38,7 +37,7 @@
                 android:maxLines="1"
                 android:layout_gravity="center"
                 android:layout_marginBottom="5dp"
-                android:textSize="20sp"
+                android:textSize="30sp"
                 android:textStyle="bold"/>
 
             <LinearLayout
@@ -49,33 +48,27 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <TextView
-                    android:id="@+id/detail_item_price"
+                    android:id="@+id/cart_item_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_120"
                     android:layout_gravity="center"
+                    android:text="@string/_120"
                     android:textColor="@color/red"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    tools:ignore="TextContrastCheck" />
 
                 <ImageView
-                    android:id="@+id/detail_item_unit_price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/cart_item_unit_price"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:background="@drawable/ic_dollar"
                     android:backgroundTint="@color/red"
-                    android:contentDescription="@string/unit_price" />
+                    android:contentDescription="@string/unit_price"
+                    tools:ignore="ImageContrastCheck" />
 
             </LinearLayout>
-
-            <Button
-                android:id="@+id/btn_att_to_cart"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/add_to_cart"
-                android:background="@drawable/btn_radius"
-                android:layout_margin="5dp" />
 
         </LinearLayout>
 

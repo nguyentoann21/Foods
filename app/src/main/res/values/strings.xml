@@ -67,4 +67,8 @@
     <string name="all_pizza">All Pizza</string>
     <string name="add_to_cart">Add To Cart</string>
     <string name="image_menu">Image Menu</string>
+    <string name="my_cart">My Cart</string>
+    <string name="total">Total</string>
+    <string name="place_order">Place Order</string>
+    <string name="order_now">Order Now</string>
 </resources>

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/bottom_background.xml" value="0.173" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/btn_radius.xml" value="0.173" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/btn_redius.xml" value="0.173" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/change_background.xml" value="0.173" />
@@ -22,6 +23,7 @@
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/activity_show_product.xml" value="0.19583333333333333" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/app_bar_navigation.xml" value="0.19583333333333333" />
+        <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.19479166666666667" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/content_navigation.xml" value="0.19583333333333333" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/fragment_cart.xml" value="0.19583333333333333" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/fragment_daily.xml" value="0.19583333333333333" />
@@ -31,6 +33,7 @@
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/fragment_profile.xml" value="0.19583333333333333" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/fragment_slideshow.xml" value="0.19583333333333333" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/item_detail.xml" value="0.25" />
+        <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/my_cart_item.xml" value="0.19583333333333333" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/nav_bar_horizontal.xml" value="0.19479166666666667" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/nav_bar_vertical.xml" value="0.22" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/nav_header_navigation.xml" value="0.19583333333333333" />
