@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class FoodDBContext extends SQLiteOpenHelper {
 
-    public static final String DB_NAME = "FoodDBContext";
+    public static final String DB_NAME = "FoodDBContext.db";
     public static final int DB_VERSION = 1;
 
     public FoodDBContext(Context context) {
@@ -34,7 +34,7 @@ public class FoodDBContext extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS Users");
         db.execSQL("DROP TABLE IF EXISTS Products");
         db.execSQL("DROP TABLE IF EXISTS Categories");
-
+        onCreate(db);
     }
 
     public Boolean addUser(String username, String fullName, String password, String confirmPassword, String address, String email, String phone){

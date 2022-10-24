@@ -23,7 +23,6 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-//        replaceFragment(new HomeFragment());
         _bottomNavigationView = findViewById(R.id.nav_bar);
         _bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()){

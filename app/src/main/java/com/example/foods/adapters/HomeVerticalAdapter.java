@@ -1,5 +1,6 @@
 package com.example.foods.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,13 +50,10 @@ public class HomeVerticalAdapter extends RecyclerView.Adapter<HomeVerticalAdapte
             @Override
             public void onClick(View v) {
                 bottomSheetDialog = new BottomSheetDialog(ctx, R.style.BottomSheetTheme);
-                View sheetView = LayoutInflater.from(ctx).inflate(R.layout.bottom_sheet_layout, null);
-                sheetView.findViewById(R.id.bottom_att_to_cart).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(ctx, "Added to cart", Toast.LENGTH_SHORT).show();
-                        bottomSheetDialog.dismiss();
-                    }
+                @SuppressLint("InflateParams") View sheetView = LayoutInflater.from(ctx).inflate(R.layout.bottom_sheet_layout, null);
+                sheetView.findViewById(R.id.bottom_att_to_cart).setOnClickListener(v1 -> {
+                    Toast.makeText(ctx, "Added to cart", Toast.LENGTH_SHORT).show();
+                    bottomSheetDialog.dismiss();
                 });
 
                 ImageView bottomImg = sheetView.findViewById(R.id.img_show_bottom);
