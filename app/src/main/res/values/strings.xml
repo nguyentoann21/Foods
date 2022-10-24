@@ -71,4 +71,5 @@
     <string name="total">Total</string>
     <string name="place_order">Place Order</string>
     <string name="order_now">Order Now</string>
+    <string name="image_cart_background">Image Cart Background</string>
 </resources>

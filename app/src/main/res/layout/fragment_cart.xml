@@ -6,15 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".ui.profile.ProfileFragment">
 
+    <ImageView
+        android:id="@+id/img_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/get_start"
+        android:contentDescription="@string/image_cart_background"
+        android:foreground="@drawable/img_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ImageContrastCheck" />
+
     <TextView
         android:id="@+id/txt_cart_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
         android:text="@string/my_cart"
-        android:textColor="@color/orange"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:textColor="@color/yellow"
+        android:textSize="45sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,17 +41,20 @@
         android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="5dp"
-        android:background="@color/purple_700"
+        android:layout_marginBottom="10dp"
+        android:background="@color/orange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_cart_title"
         app:layout_constraintWidth_percent="0.8" />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cart_show"
         android:layout_width="match_parent"
-        android:layout_height="570dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="480dp"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,13 +64,13 @@
         android:id="@+id/view_bottom"
         android:layout_width="0dp"
         android:layout_height="5dp"
-        android:layout_marginTop="5dp"
-        android:background="@color/purple_700"
+        android:layout_marginTop="10dp"
+        android:background="@color/orange"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cart_show"
         app:layout_constraintWidth_percent="0.8" />
-
 
     <TextView
         android:id="@+id/total_txt"
@@ -61,47 +81,49 @@
         android:layout_marginTop="5dp"
         android:padding="5dp"
         android:text="@string/total"
-        android:textColor="@color/red"
-        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_place_order"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_bottom"
-        app:layout_constraintVertical_bias="0.169" />
+        app:layout_constraintVertical_bias="0.169"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
-        android:contentDescription="@string/place_order"
         android:id="@+id/imageView2"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/ic_dollar"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/place_order"
         app:layout_constraintBottom_toTopOf="@+id/btn_place_order"
         app:layout_constraintEnd_toStartOf="@+id/total_price"
         app:layout_constraintTop_toBottomOf="@+id/view_bottom"
-        app:layout_constraintVertical_bias="0.16" />
+        app:layout_constraintVertical_bias="0.16"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/total_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="45dp"
         android:text="@string/_120"
-        android:textColor="@color/red"
-        android:textSize="30sp"
+        android:textColor="@color/silver"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_place_order"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_bottom"
-        app:layout_constraintVertical_bias="0.16" />
+        app:layout_constraintVertical_bias="0.16"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/btn_place_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginBottom="48dp"
         android:background="@drawable/btn_radius"
         android:text="@string/place_order"
         android:textColor="@color/white"
@@ -111,8 +133,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_bottom"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/cart_show"
+        app:layout_constraintVertical_bias="0.5"
         tools:ignore="DuplicateSpeakableTextCheck" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
