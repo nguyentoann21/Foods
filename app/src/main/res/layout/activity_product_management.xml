@@ -2,38 +2,39 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/layout_admin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.admin.AdminActivity">
+    tools:context=".ui.admin.management.ProductManagementActivity">
 
     <ImageView
         android:id="@+id/img_background_manageCategory"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/admin"
-        android:contentDescription="@string/background_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/products"
+        android:contentDescription="@string/background_products_management"
         android:foreground="@drawable/img_foreground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/txt_category_manager"
+        android:id="@+id/txt_products_manager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
         android:gravity="center"
         android:padding="5dp"
-        android:text="@string/administrator"
+        android:text="@string/product"
         android:textColor="@color/orange"
-        android:textSize="50sp"
-        android:layout_marginTop="30dp"
+        android:textSize="80sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_background_manageCategory" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,8 +44,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_category_manager"
-        app:layout_constraintVertical_bias="0.408">
+        app:layout_constraintTop_toBottomOf="@+id/txt_products_manager"
+        app:layout_constraintVertical_bias="0.5">
 
         <LinearLayout
             android:layout_width="370dp"
@@ -52,22 +53,23 @@
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:background="@drawable/btn_radius"
-            android:backgroundTint="@color/transparent_50"
+            android:backgroundTint="@color/transparent_80"
             android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView
+                android:contentDescription="@string/add_product"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/ic_user" />
+                android:background="@drawable/ic_add" />
 
             <TextView
-                android:layout_width="220dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Users"
+                android:text="@string/add_new"
                 android:textColor="@color/white"
-                android:textSize="27sp"
+                android:textSize="30sp"
                 android:textStyle="bold|italic" />
         </LinearLayout>
 
@@ -77,22 +79,23 @@
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:background="@drawable/btn_radius"
-            android:backgroundTint="@color/transparent_50"
+            android:backgroundTint="@color/transparent_80"
             android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView
+                android:contentDescription="@string/show_product"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/ic_product" />
+                android:background="@drawable/ic_show" />
 
             <TextView
-                android:layout_width="220dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Products"
+                android:text="@string/show_all"
                 android:textColor="@color/white"
-                android:textSize="27sp"
+                android:textSize="30sp"
                 android:textStyle="bold|italic" />
         </LinearLayout>
 
@@ -102,72 +105,23 @@
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:background="@drawable/btn_radius"
-            android:backgroundTint="@color/transparent_50"
+            android:backgroundTint="@color/transparent_80"
             android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView
+                android:contentDescription="@string/back_previous"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/ic_category" />
+                android:background="@drawable/ic_cancel" />
 
             <TextView
-                android:layout_width="220dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/category"
+                android:text="@string/back"
                 android:textColor="@color/white"
-                android:textSize="27sp"
-                android:textStyle="bold|italic" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="370dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/btn_radius"
-            android:backgroundTint="@color/transparent_50"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/ic_password" />
-
-            <TextView
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Change Password"
-                android:textColor="@color/white"
-                android:textSize="27sp"
-                android:textStyle="bold|italic" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="370dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/btn_radius"
-            android:backgroundTint="@color/transparent_50"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/ic_home" />
-
-            <TextView
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/home"
-                android:textColor="@color/white"
-                android:textSize="27sp"
+                android:textSize="30sp"
                 android:textStyle="bold|italic" />
         </LinearLayout>
 

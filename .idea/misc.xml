@@ -9,20 +9,29 @@
         <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/change_background.xml" value="0.173" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/default_background.xml" value="0.173" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/gradient.xml" value="0.173" />
+        <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/ic_category.xml" value="0.173" />
+        <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/ic_note.xml" value="0.173" />
+        <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/ic_password.xml" value="0.173" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/icon_address.xml" value="0.173" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/icon_edit.xml" value="0.173" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/icon_email.xml" value="0.173" />
+        <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/icon_key.xml" value="0.173" />
+        <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/icon_password.xml" value="0.173" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/icon_phone.xml" value="0.173" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/icon_user.xml" value="0.173" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/img_foreground.xml" value="0.173" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/drawable/top_left_radius.xml" value="0.173" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/activity_admin.xml" value="0.19583333333333333" />
+        <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/activity_category_management.xml" value="0.19583333333333333" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/activity_home.xml" value="0.19583333333333333" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/activity_manage_user.xml" value="0.19583333333333333" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/activity_navigation.xml" value="0.19583333333333333" />
+        <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/activity_product_management.xml" value="0.19479166666666667" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/activity_show_product.xml" value="0.19583333333333333" />
+        <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/activity_user_management.xml" value="0.18177083333333333" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/app_bar_navigation.xml" value="0.19583333333333333" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.19479166666666667" />
         <entry key="..\:/Senpaii/Foods/app/src/main/res/layout/content_navigation.xml" value="0.19583333333333333" />

@@ -72,4 +72,22 @@
     <string name="place_order">Place Order</string>
     <string name="order_now">Order Now</string>
     <string name="image_cart_background">Image Cart Background</string>
+    <string name="background_category_manager">Background Category Manager</string>
+    <string name="background_admin">Background Admin</string>
+    <string name="administrator">Administrator</string>
+    <string name="product">Product</string>
+    <string name="users">Users</string>
+    <string name="background_products_management">Background Products Management</string>
+    <string name="add_product">Add product</string>
+    <string name="add_new">Add new</string>
+    <string name="show_product">Show product</string>
+    <string name="show_all">Show all</string>
+    <string name="back_previous">Back previous</string>
+    <string name="back">Back</string>
+    <string name="show_users">Show users</string>
+    <string name="show_user">Show user</string>
+    <string name="background_users_management">Background Users Management</string>
+    <string name="add_user">Add user</string>
+    <string name="add_category">Add category</string>
+    <string name="show_category">Show category</string>
 </resources>

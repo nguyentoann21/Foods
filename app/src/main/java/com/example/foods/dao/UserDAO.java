@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class UserDAO {
     /*
     @NonNull
-    public static ArrayList<Users> getAll(Context context){
+    public static ArrayList<Users> getAllUser(Context context){
         ArrayList<Users> listUsers = new ArrayList<>();
         FoodDBContext data = new FoodDBContext(context);
         SQLiteDatabase db = data.getReadableDatabase();
