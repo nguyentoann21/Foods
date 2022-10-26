@@ -22,7 +22,6 @@ import com.example.foods.adapters.IUpdateVerticalRecycle;
 import com.example.foods.models.HomeHorizontalModel;
 import com.example.foods.models.HomeVerticalModel;
 import com.example.foods.ui.account.LoginActivity;
-import com.example.foods.ui.admin.AdminActivity;
 
 import java.util.ArrayList;
 

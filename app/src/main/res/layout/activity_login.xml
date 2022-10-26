@@ -163,7 +163,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/btn_radius"
-            android:backgroundTint="@color/orange"
+            android:backgroundTint="@color/silver"
             android:gravity="center"
             android:orientation="horizontal"
             android:paddingStart="10dp"
@@ -184,7 +184,7 @@
                 android:layout_marginStart="5dp"
                 android:padding="10dp"
                 android:text="@string/continue_with_google"
-                android:textColor="@color/white"
+                android:textColor="@color/purple_700"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 tools:ignore="TextContrastCheck" />
