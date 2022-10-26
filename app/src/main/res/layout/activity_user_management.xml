@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.admin.management.UserManagementActivity">
+    tools:context=".ui.admin.management.user.UserManagementActivity">
 
     <ImageView
         android:id="@+id/img_background_manageUser"
@@ -48,6 +48,7 @@
         app:layout_constraintVertical_bias="0.5">
 
         <LinearLayout
+            android:id="@+id/layout_add_user"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -74,6 +75,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layout_show_user"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -100,6 +102,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layout_back_admin"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

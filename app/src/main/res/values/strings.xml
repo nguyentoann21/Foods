@@ -90,4 +90,7 @@
     <string name="add_user">Add user</string>
     <string name="add_category">Add category</string>
     <string name="show_category">Show category</string>
+    <string name="create_user">Create User</string>
+    <string name="cancel">Cancel</string>
+    <string name="products">Products</string>
 </resources>

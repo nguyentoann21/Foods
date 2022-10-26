@@ -17,7 +17,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/txt_category_manager"
@@ -47,6 +48,7 @@
         app:layout_constraintVertical_bias="0.408">
 
         <LinearLayout
+            android:id="@+id/manage_user"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -57,6 +59,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:contentDescription="@string/user"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:background="@drawable/ic_user" />
@@ -65,13 +68,14 @@
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Users"
+                android:text="@string/users"
                 android:textColor="@color/white"
                 android:textSize="27sp"
                 android:textStyle="bold|italic" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/manage_product"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -82,6 +86,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:contentDescription="@string/product"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:background="@drawable/ic_product" />
@@ -90,13 +95,14 @@
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Products"
+                android:text="@string/products"
                 android:textColor="@color/white"
                 android:textSize="27sp"
                 android:textStyle="bold|italic" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/manage_category"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -107,6 +113,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:contentDescription="@string/category"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:background="@drawable/ic_category" />
@@ -122,6 +129,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/change_password"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -132,6 +140,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:contentDescription="@string/change_password"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:background="@drawable/ic_password" />
@@ -140,13 +149,14 @@
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Change Password"
+                android:text="@string/change_password"
                 android:textColor="@color/white"
                 android:textSize="27sp"
                 android:textStyle="bold|italic" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/admin_to_home"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -157,6 +167,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:contentDescription="@string/home"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:background="@drawable/ic_home" />

@@ -1,10 +1,12 @@
 package com.example.foods.ui.home;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 
 import androidx.annotation.NonNull;
@@ -19,6 +21,8 @@ import com.example.foods.adapters.HomeVerticalAdapter;
 import com.example.foods.adapters.IUpdateVerticalRecycle;
 import com.example.foods.models.HomeHorizontalModel;
 import com.example.foods.models.HomeVerticalModel;
+import com.example.foods.ui.account.LoginActivity;
+import com.example.foods.ui.admin.AdminActivity;
 
 import java.util.ArrayList;
 
@@ -30,10 +34,13 @@ public class HomeFragment extends Fragment implements IUpdateVerticalRecycle {
     ArrayList<HomeVerticalModel>homeVerticalModelList;
     HomeHorizontalAdapter homeHorizontalAdapter;
     HomeVerticalAdapter homeVerticalAdapter;
+    ImageView admin;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home,container,false);
+
+            admin = (ImageView)root.findViewById(R.id.img_user);
 
             homeHorizontalRecycle = root.findViewById(R.id.home_recycle_horizontal);
             homeHorizontalModelList = new ArrayList<>();
@@ -60,7 +67,7 @@ public class HomeFragment extends Fragment implements IUpdateVerticalRecycle {
             homeVerticalRecycle.setAdapter(homeVerticalAdapter);
 
             homeVerticalRecycle.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
-
+            admin.setOnClickListener(v -> startActivity(new Intent(getActivity(), LoginActivity.class)));
         return root;
     }
 

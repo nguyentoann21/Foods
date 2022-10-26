@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.foods">
+    package="com.example.foods" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,34 +14,34 @@
         android:roundIcon="@drawable/ic_product"
         android:supportsRtl="true"
         android:theme="@style/Theme.Foods"
-        tools:targetApi="31">
+        tools:targetApi="33" >
         <activity
-            android:name=".ui.admin.management.CategoryManagementActivity"
-            android:exported="false"/>
+            android:name=".ui.admin.management.user.AddUserActivity"
+            android:exported="false" />
         <activity
-            android:name=".ui.admin.management.ProductManagementActivity"
-            android:exported="false"/>
-        <activity
-            android:name=".ui.admin.management.UserManagementActivity"
-            android:exported="true">
-            <intent-filter>
+            android:name=".ui.admin.management.user.ShowAllUserActivity"
+            android:exported="false" />
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity>-->
+        <activity
+            android:name=".ui.admin.management.category.CategoryManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.management.product.ProductManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.management.user.UserManagementActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.admin.AdminActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ui.product.ShowProductActivity"
             android:exported="false" />
-
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-6587684017699475~7623351565" />
-
         <activity
             android:name=".ui.account.LoginActivity"
             android:exported="false" />
@@ -50,24 +50,15 @@
             android:exported="false" />
         <activity
             android:name=".ui.home.HomeActivity"
-            android:exported="false">
-            <!--android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            android:exported="false" >
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-            <!-- <intent-filter>
+            android:exported="true" >
+             <intent-filter>
              <action android:name="android.intent.action.MAIN" />
-
-
              <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>-->
+             </intent-filter>
         </activity>
     </application>
 

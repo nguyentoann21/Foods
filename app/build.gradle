@@ -44,7 +44,6 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     implementation 'androidx.navigation:navigation-fragment:2.5.3'
     implementation 'androidx.navigation:navigation-ui:2.5.3'
-    implementation 'com.google.android.ads:mediation-test-suite:3.0.0'
     implementation 'androidx.room:room-common:2.4.3'
     annotationProcessor 'androidx.room:room-compiler:2.4.3'
     testImplementation 'junit:junit:4.13.2'
@@ -52,8 +51,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation 'com.mikhaellopez:circularimageview:4.3.1'
-    implementation 'com.google.android.gms:play-services-auth:20.3.0'
-    implementation 'com.google.android.gms:play-services-ads:21.3.0'
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'org.jetbrains:annotations-java5:15.0'
+    implementation 'com.google.android.gms:play-services-auth:20.3.0'
+    implementation 'gun0912.ted:tedbottompicker:2.0.1'
 }

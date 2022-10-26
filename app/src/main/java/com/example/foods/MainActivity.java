@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.google.android.ads.mediationtestsuite.activities.HomeActivity;
+import com.example.foods.ui.home.HomeActivity;
 
 
 public class MainActivity extends AppCompatActivity {
