@@ -93,4 +93,8 @@
     <string name="create_user">Create User</string>
     <string name="cancel">Cancel</string>
     <string name="products">Products</string>
+    <string name="background_user_detail">Background User Detail</string>
+    <string name="user_detail">User Detail</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
 </resources>

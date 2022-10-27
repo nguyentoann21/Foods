@@ -73,15 +73,15 @@ public class UserDAO {
         values.put("email", user.getEmail());
         values.put("phone", user.getPhone());
 
-        int result = db.update("Users", values, "username=?", new String[]{user.getUsername()});
+        int result = db.update("Users", values, "userId=?", new String[]{user.getUserId() + ""});
         return (result > 0);
     }
 
 
-    public static boolean deleteUser(Context context, String username){
+    public static boolean deleteUser(Context context, int id){
         FoodDBContext data = new FoodDBContext(context);
         SQLiteDatabase db = data.getWritableDatabase();
-        int result = db.delete("Users", "username=?", new String[]{username});
+        int result = db.delete("Users", "userId=?", new String[]{id + ""});
         return (result > 0);
     }
 

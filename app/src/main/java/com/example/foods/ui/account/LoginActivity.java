@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -97,6 +98,7 @@ public class LoginActivity extends AppCompatActivity {
                 task.getResult(ApiException.class);
                 navigateToHome();
             } catch (ApiException e) {
+                Log.d(e.toString(), null);
                 Toast.makeText(LoginActivity.this, "Something was wrong", Toast.LENGTH_SHORT).show();
             }
         }
