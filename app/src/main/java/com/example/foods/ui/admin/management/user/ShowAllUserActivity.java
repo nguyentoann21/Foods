@@ -8,7 +8,6 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,12 +35,7 @@ public class ShowAllUserActivity extends AppCompatActivity {
         adapter = new ArrayAdapter(ShowAllUserActivity.this, android.R.layout.simple_list_item_1, listUser);
         lv.setAdapter(adapter);
 
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                showDialogUser(i);
-            }
-        });
+        lv.setOnItemClickListener((adapterView, view, i, l) -> showDialogUser(i));
 
     }
 
@@ -95,25 +89,19 @@ public class ShowAllUserActivity extends AppCompatActivity {
             message.setTitle("Delete message");
             message.setMessage("Do you want to delete "+user.getFullName()+", right?");
             message.setIcon(R.drawable.ic_remove);
-            message.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    if(UserDAO.deleteUser(ShowAllUserActivity.this, position)){
-                        Toast.makeText(ShowAllUserActivity.this, "Deleted user is successful", Toast.LENGTH_SHORT).show();
-                        listUser.clear();
-                        listUser.addAll(UserDAO.getAllUser(ShowAllUserActivity.this));
-                        adapter.notifyDataSetChanged();
-                        dialog.dismiss();
-                    }else{
-                        Toast.makeText(ShowAllUserActivity.this, "Delete failed", Toast.LENGTH_SHORT).show();
-                    }
+            message.setPositiveButton("OK", (dialogInterface, i) -> {
+                if(UserDAO.deleteUser(ShowAllUserActivity.this, position)){
+                    Toast.makeText(ShowAllUserActivity.this, "Deleted user is successful", Toast.LENGTH_SHORT).show();
+                    listUser.clear();
+                    listUser.addAll(UserDAO.getAllUser(ShowAllUserActivity.this));
+                    adapter.notifyDataSetChanged();
+                    dialog.dismiss();
+                }else{
+                    Toast.makeText(ShowAllUserActivity.this, "Delete failed", Toast.LENGTH_SHORT).show();
                 }
             });
-            message.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
+            message.setNegativeButton("Cancel", (dialogInterface, i) -> {
 
-                }
             });
             AlertDialog dialogSub = message.create();
             dialogSub.show();

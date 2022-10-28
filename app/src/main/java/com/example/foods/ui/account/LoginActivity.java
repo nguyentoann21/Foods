@@ -26,7 +26,7 @@ import com.google.android.gms.tasks.Task;
 
 public class LoginActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 1000;
-    TextView signUp;
+    TextView signUp, forgotPwd;
     ImageView close;
     LinearLayout google;
     GoogleSignInOptions gso;
@@ -46,12 +46,13 @@ public class LoginActivity extends AppCompatActivity {
         login = findViewById(R.id.btn_login);
         username = findViewById(R.id.txt_login_username);
         password = findViewById(R.id.txt_login_password);
+        forgotPwd = findViewById(R.id.txt_login_forgot);
 
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         if(account != null){
             navigateToHome();
         }
-        login.setOnClickListener(v -> {
+        login.setOnClickListener(v1 -> {
             String user, pwd;
             user = username.getText().toString();
             pwd = password.getText().toString();
@@ -70,13 +71,14 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                     }
                 }else{
-                    Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Login failed, Incorrect username or password", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        google.setOnClickListener(v -> signIn());
-        signUp.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegisterActivity.class)));
-        close.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, HomeActivity.class)));
+        google.setOnClickListener(v2 -> signIn());
+        forgotPwd.setOnClickListener(v3 -> startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class)));
+        signUp.setOnClickListener(v4 -> startActivity(new Intent(LoginActivity.this, RegisterActivity.class)));
+        close.setOnClickListener(v5 -> startActivity(new Intent(LoginActivity.this, HomeActivity.class)));
     }
 
     private void signIn(){

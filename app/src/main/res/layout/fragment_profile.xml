@@ -119,13 +119,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/txt_name_field" />
 
             <TextView
-                android:id="@+id/txt_email_field"
+                android:id="@+id/txt_phone_field"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:padding="5dp"
-                android:text="@string/email"
+                android:text="@string/phone"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -134,17 +134,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/txt_address_field" />
 
             <TextView
-                android:id="@+id/txt_phone_field"
+                android:id="@+id/txt_email_field"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="@string/phone"
+                android:text="@string/email"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/txt_email_field"
-                app:layout_constraintStart_toStartOf="@+id/txt_email_field"
-                app:layout_constraintTop_toBottomOf="@+id/txt_email_field" />
+                app:layout_constraintEnd_toEndOf="@+id/txt_phone_field"
+                app:layout_constraintStart_toStartOf="@+id/txt_phone_field"
+                app:layout_constraintTop_toBottomOf="@+id/txt_phone_field" />
 
             <TextView
                 android:id="@+id/txt_display_name"
@@ -176,11 +176,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/txt_display_name" />
 
             <TextView
-                android:id="@+id/txt_display_email"
+                android:id="@+id/txt_display_phone"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:text="@string/domain_domain_com"
+                android:text="@string/_0909098999"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -191,18 +191,18 @@
                 app:layout_constraintTop_toBottomOf="@+id/txt_display_location" />
 
             <TextView
-                android:id="@+id/txt_display_phone"
+                android:id="@+id/txt_display_email"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:gravity="center"
-                android:text="@string/_0909098999"
+                android:text="@string/domain_domain_com"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/txt_display_email"
-                app:layout_constraintStart_toStartOf="@+id/txt_display_email"
-                app:layout_constraintTop_toBottomOf="@+id/txt_display_email" />
+                app:layout_constraintEnd_toEndOf="@+id/txt_display_phone"
+                app:layout_constraintStart_toStartOf="@+id/txt_display_phone"
+                app:layout_constraintTop_toBottomOf="@+id/txt_display_phone" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
@@ -223,11 +223,12 @@
 
         <Button
             android:id="@+id/btn_logout"
-            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:text="@string/logout" />
+            android:text="@string/logout"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.foods" >
+    package="com.example.foods">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,19 +14,19 @@
         android:roundIcon="@drawable/ic_product"
         android:supportsRtl="true"
         android:theme="@style/Theme.Foods"
-        tools:targetApi="33" >
+        tools:targetApi="33">
+        <activity
+            android:name=".ui.account.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.account.ChangePasswordActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.admin.management.user.AddUserActivity"
             android:exported="false" />
         <activity
             android:name=".ui.admin.management.user.ShowAllUserActivity"
             android:exported="false" />
-            <!--<intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>-->
         <activity
             android:name=".ui.admin.management.category.CategoryManagementActivity"
             android:exported="false" />
@@ -50,15 +50,15 @@
             android:exported="false" />
         <activity
             android:name=".ui.home.HomeActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

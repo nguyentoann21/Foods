@@ -3,6 +3,7 @@ package com.example.foods.dao;
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -14,6 +15,9 @@ import com.example.foods.models.Users;
 import java.util.ArrayList;
 
 public class UserDAO {
+    public static Users USER;
+    public static Users EMAIL;
+
     public static ArrayList<Users> getAllUser(Context context){
         ArrayList<Users> listUsers = new ArrayList<>();
         FoodDBContext data = new FoodDBContext(context);
@@ -96,7 +100,24 @@ public class UserDAO {
         FoodDBContext data = new FoodDBContext(context);
         SQLiteDatabase db = data.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM Users WHERE username=? and password=?", new String[]{username, password});
-        return cursor.getCount() > 0;
+        if(cursor.getCount() > 0){
+            cursor.moveToFirst();
+            int uId;
+            String user, name, pwd, cPwd, add, mail, call, isAd;
+            uId = cursor.getInt(0);
+            user = cursor.getString(1);
+            name = cursor.getString(2);
+            pwd = cursor.getString(3);
+            cPwd = cursor.getString(4);
+            add = cursor.getString(5);
+            mail = cursor.getString(6);
+            call = cursor.getString(7);
+            isAd = cursor.getString(8);
+            USER = new Users(uId, user, name, pwd, cPwd, add, mail, call, isAd);
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public static boolean isAdmin(Context context, String username, String password){
@@ -104,5 +125,30 @@ public class UserDAO {
         SQLiteDatabase db = data.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM Users WHERE username=? and password=? and role='admin'", new String[]{username, password});
         return (cursor.getCount() > 0);
+    }
+
+    public static boolean changePassword(Context context, String username, String newPassword){
+        FoodDBContext data = new FoodDBContext(context);
+        SQLiteDatabase db = data.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("password", newPassword);
+        int result = db.update("Users", values, "username=?", new String[]{username});
+        return (result > 0);
+    }
+
+    public static boolean checkEmail(Context context, String email, String username){
+        FoodDBContext data = new FoodDBContext(context);
+        SQLiteDatabase db = data.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM Users WHERE email=? and username=?", new String[]{email, username});
+        return cursor.getCount() > 0;
+    }
+
+    public static boolean forgotPassword(Context context, String email, String resetPassword){
+        FoodDBContext data = new FoodDBContext(context);
+        SQLiteDatabase db = data.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("password", resetPassword);
+        int result = db.update("Users", values, "email=?", new String[]{email});
+        return (result > 0);
     }
 }

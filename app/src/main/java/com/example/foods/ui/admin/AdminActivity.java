@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 
 import com.example.foods.R;
+import com.example.foods.ui.account.ChangePasswordActivity;
 import com.example.foods.ui.admin.management.category.CategoryManagementActivity;
 import com.example.foods.ui.admin.management.product.ProductManagementActivity;
 import com.example.foods.ui.admin.management.user.UserManagementActivity;
@@ -29,7 +30,7 @@ public class AdminActivity extends AppCompatActivity {
         user.setOnClickListener(v -> startActivity(new Intent(AdminActivity.this, UserManagementActivity.class)));
         product.setOnClickListener(v -> startActivity(new Intent(AdminActivity.this, ProductManagementActivity.class)));
         category.setOnClickListener(v -> startActivity(new Intent(AdminActivity.this, CategoryManagementActivity.class)));
-        change.setOnClickListener(v -> startActivity(new Intent(AdminActivity.this, UserManagementActivity.class)));
+        change.setOnClickListener(v -> startActivity(new Intent(AdminActivity.this, ChangePasswordActivity.class)));
         home.setOnClickListener(v -> startActivity(new Intent(AdminActivity.this, HomeActivity.class)));
     }
 }

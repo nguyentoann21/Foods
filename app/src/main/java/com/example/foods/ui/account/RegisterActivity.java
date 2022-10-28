@@ -27,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
         username = findViewById(R.id.txt_register_username);
         fullName = findViewById(R.id.txt_register_fullName);
         password = findViewById(R.id.txt_register_password);
-        confirmPassword = findViewById(R.id.txt_add_user_rePassword);
+        confirmPassword = findViewById(R.id.txt_register_rePassword);
         address = findViewById(R.id.txt_register_address);
         email = findViewById(R.id.txt_register_email);
         phone = findViewById(R.id.txt_register_phone);
