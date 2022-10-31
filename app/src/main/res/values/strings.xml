@@ -104,4 +104,22 @@
     <string name="forgot_password_title">Forgot Password</string>
     <string name="background_forgot_password">Background Forgot Password</string>
     <string name="reset_password">Reset Password</string>
+    <string name="new_product">New Product</string>
+    <string name="background_add_product">Background Add Product</string>
+    <string name="new_category">New Category</string>
+    <string name="background_add_category">Background Add Category</string>
+    <string name="category_image">Category Image</string>
+    <string name="please_enter_category_name">Please enter category name</string>
+    <string name="image_category">Image Category</string>
+    <string name="category_id">category id</string>
+    <string name="category_name">category name</string>
+    <string name="background_show_categories">Background Show Categories</string>
+    <string name="lists_of_categories">Lists of Categories</string>
+    <string name="go_to_add_category">Go To Add Category</string>
+    <string name="go_to_list">Go To List</string>
+    <string name="lists_of_users">Lists of Users</string>
+    <string name="go_to_add_user">Go To Add User</string>
+    <string name="category_detail">Category Detail</string>
+    <string name="image_detail_item">Image Detail item</string>
+    <string name="background_show_category_dialog">Background Show Category Dialog</string>
 </resources>

@@ -1,14 +1,9 @@
 package com.example.foods.dao;
 
-import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
-import androidx.annotation.NonNull;
-
 import com.example.foods.database.FoodDBContext;
 import com.example.foods.models.Users;
 
@@ -16,8 +11,6 @@ import java.util.ArrayList;
 
 public class UserDAO {
     public static Users USER;
-    public static Users EMAIL;
-
     public static ArrayList<Users> getAllUser(Context context){
         ArrayList<Users> listUsers = new ArrayList<>();
         FoodDBContext data = new FoodDBContext(context);
@@ -93,6 +86,7 @@ public class UserDAO {
         FoodDBContext data = new FoodDBContext(context);
         SQLiteDatabase db = data.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM Users WHERE username=?", new String[]{username});
+        cursor.close();
         return cursor.getCount() > 0;
     }
 
@@ -100,6 +94,7 @@ public class UserDAO {
         FoodDBContext data = new FoodDBContext(context);
         SQLiteDatabase db = data.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM Users WHERE username=? and password=?", new String[]{username, password});
+        cursor.close();
         if(cursor.getCount() > 0){
             cursor.moveToFirst();
             int uId;
@@ -124,6 +119,7 @@ public class UserDAO {
         FoodDBContext data = new FoodDBContext(context);
         SQLiteDatabase db = data.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM Users WHERE username=? and password=? and role='admin'", new String[]{username, password});
+        cursor.close();
         return (cursor.getCount() > 0);
     }
 
@@ -140,6 +136,7 @@ public class UserDAO {
         FoodDBContext data = new FoodDBContext(context);
         SQLiteDatabase db = data.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM Users WHERE email=? and username=?", new String[]{email, username});
+        cursor.close();
         return cursor.getCount() > 0;
     }
 

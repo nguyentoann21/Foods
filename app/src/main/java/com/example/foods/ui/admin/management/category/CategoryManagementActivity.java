@@ -8,9 +8,7 @@ import android.widget.LinearLayout;
 
 import com.example.foods.R;
 import com.example.foods.ui.admin.AdminActivity;
-import com.example.foods.ui.admin.management.product.ProductManagementActivity;
-import com.example.foods.ui.admin.management.user.AddUserActivity;
-import com.example.foods.ui.admin.management.user.ShowAllUserActivity;
+
 
 public class CategoryManagementActivity extends AppCompatActivity {
     LinearLayout addC, showC, backC;
@@ -23,8 +21,8 @@ public class CategoryManagementActivity extends AppCompatActivity {
         showC = findViewById(R.id.layout_show_category);
         backC = findViewById(R.id.layout_category_back);
 
-        addC.setOnClickListener(v -> startActivity(new Intent(CategoryManagementActivity.this, AddUserActivity.class)));
-        showC.setOnClickListener(v -> startActivity(new Intent(CategoryManagementActivity.this, ShowAllUserActivity.class)));
+        addC.setOnClickListener(v -> startActivity(new Intent(CategoryManagementActivity.this, AddCategoryActivity.class)));
+        showC.setOnClickListener(v -> startActivity(new Intent(CategoryManagementActivity.this, ShowAllCategoryActivity.class)));
         backC.setOnClickListener(v -> startActivity(new Intent(CategoryManagementActivity.this, AdminActivity.class)));
     }
 }

@@ -90,16 +90,14 @@ public class Users {
 
     @Override
     public String toString() {
-        return "Users{" +
-                "userId=" + userId +
-                ", username='" + username + '\'' +
-                ", fullName='" + fullName + '\'' +
-                ", password='" + password + '\'' +
-                ", confirmPassword='" + confirmPassword + '\'' +
-                ", address='" + address + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                ", role='" + role + '\'' +
-                '}';
+        return  "ID: " + userId + "\n"+
+                "Username: " + username + "\n" +
+                "Full-name: " + fullName + "\n" +
+                "Password: " + password + "\n" +
+                "Re-password: " + confirmPassword + "\n" +
+                "Address: " + address + "\n" +
+                "Email: " + email + "\n"+
+                "Phone: " + phone + "\n" +
+                "Role: " + role + "\n";
     }
 }

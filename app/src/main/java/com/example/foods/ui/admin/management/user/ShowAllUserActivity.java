@@ -4,7 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,20 +23,22 @@ import java.util.ArrayList;
 public class ShowAllUserActivity extends AppCompatActivity {
 
     ListView lv;
-    ArrayAdapter adapter;
+    ArrayAdapter<? extends Users> adapter;
+    Button goAddUser;
     ArrayList<Users> listUser = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_all_user);
+        goAddUser = findViewById(R.id.btn_go_add_user);
         lv = findViewById(R.id.lv_show_all_user);
         listUser = UserDAO.getAllUser(ShowAllUserActivity.this);
-        adapter = new ArrayAdapter(ShowAllUserActivity.this, android.R.layout.simple_list_item_1, listUser);
+        adapter = new ArrayAdapter<>(ShowAllUserActivity.this, android.R.layout.simple_list_item_1, listUser);
         lv.setAdapter(adapter);
 
         lv.setOnItemClickListener((adapterView, view, i, l) -> showDialogUser(i));
-
+        goAddUser.setOnClickListener(v -> startActivity(new Intent(ShowAllUserActivity.this, AddUserActivity.class)));
     }
 
     private void showDialogUser(int position){
