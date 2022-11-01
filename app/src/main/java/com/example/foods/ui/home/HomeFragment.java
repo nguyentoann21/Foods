@@ -47,6 +47,7 @@ public class HomeFragment extends Fragment implements IUpdateVerticalRecycle {
                 admin.setVisibility(View.GONE);
             }else{
                 admin.setVisibility(View.VISIBLE);
+                admin.setOnClickListener(v -> startActivity(new Intent(getActivity(), LoginActivity.class)));
             }
 
             homeHorizontalRecycle = root.findViewById(R.id.home_recycle_horizontal);
@@ -74,7 +75,6 @@ public class HomeFragment extends Fragment implements IUpdateVerticalRecycle {
             homeVerticalRecycle.setAdapter(homeVerticalAdapter);
 
             homeVerticalRecycle.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
-            admin.setOnClickListener(v -> startActivity(new Intent(getActivity(), LoginActivity.class)));
         return root;
     }
 
