@@ -5,11 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,20 +15,10 @@ import com.example.foods.R;
 import com.example.foods.dao.UserDAO;
 import com.example.foods.ui.admin.AdminActivity;
 import com.example.foods.ui.home.HomeActivity;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.tasks.Task;
 
 public class LoginActivity extends AppCompatActivity {
-    private static final int RC_SIGN_IN = 1000;
     TextView signUp, forgotPwd;
     ImageView close;
-    LinearLayout google;
-    GoogleSignInOptions gso;
-    GoogleSignInClient gsc;
     Button login;
     EditText username, password;
 
@@ -40,18 +28,11 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         signUp = findViewById(R.id.btn_toSignUp);
         close = findViewById(R.id.img_login_cancel);
-        google = findViewById(R.id.layout_login_google);
-        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-        gsc = GoogleSignIn.getClient(LoginActivity.this, gso);
         login = findViewById(R.id.btn_login);
         username = findViewById(R.id.txt_login_username);
         password = findViewById(R.id.txt_login_password);
         forgotPwd = findViewById(R.id.txt_login_forgot);
 
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-        if(account != null){
-            navigateToHome();
-        }
         login.setOnClickListener(v1 -> {
             String user, pwd;
             user = username.getText().toString();
@@ -75,34 +56,8 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-        google.setOnClickListener(v2 -> signIn());
         forgotPwd.setOnClickListener(v3 -> startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class)));
         signUp.setOnClickListener(v4 -> startActivity(new Intent(LoginActivity.this, RegisterActivity.class)));
         close.setOnClickListener(v5 -> startActivity(new Intent(LoginActivity.this, HomeActivity.class)));
-    }
-
-    private void signIn(){
-        Intent _signIntent = gsc.getSignInIntent();
-        startActivityForResult(_signIntent, RC_SIGN_IN);
-    }
-
-    void navigateToHome(){
-        finish();
-        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == RC_SIGN_IN){
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            try {
-                task.getResult(ApiException.class);
-                navigateToHome();
-            } catch (ApiException e) {
-                Log.d(e.toString(), null);
-                Toast.makeText(LoginActivity.this, "Something was wrong", Toast.LENGTH_SHORT).show();
-            }
-        }
     }
 }

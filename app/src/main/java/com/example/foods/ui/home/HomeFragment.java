@@ -18,9 +18,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.foods.R;
 import com.example.foods.adapters.HomeHorizontalAdapter;
 import com.example.foods.adapters.HomeVerticalAdapter;
+import com.example.foods.dao.UserDAO;
 import com.example.foods.interfaces.IUpdateVerticalRecycle;
 import com.example.foods.models.HomeHorizontalModel;
 import com.example.foods.models.HomeVerticalModel;
+import com.example.foods.models.Users;
 import com.example.foods.ui.account.LoginActivity;
 
 import java.util.ArrayList;
@@ -39,7 +41,13 @@ public class HomeFragment extends Fragment implements IUpdateVerticalRecycle {
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home,container,false);
 
-            admin = (ImageView)root.findViewById(R.id.img_user);
+            admin = root.findViewById(R.id.img_user);
+            Users u = UserDAO.USER;
+            if(u != null){
+                admin.setVisibility(View.GONE);
+            }else{
+                admin.setVisibility(View.VISIBLE);
+            }
 
             homeHorizontalRecycle = root.findViewById(R.id.home_recycle_horizontal);
             homeHorizontalModelList = new ArrayList<>();

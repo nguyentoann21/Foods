@@ -18,14 +18,13 @@ public class FoodDBContext extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE Users(userId INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT NOT NULL, fullName TEXT NOT NULL, password TEXT NOT NULL, confirmPassword TEXT NOT NULL, address TEXT NOT NULL, email TEXT NOT NULL, phone TEXT NOT NULL, role TEXT NOT NULL DEFAULT 'user')");
-        db.execSQL("CREATE TABLE Categories(categoryId INTEGER PRIMARY KEY AUTOINCREMENT, categoryImage BLOB NOT NULL, categoryName TEXT NOT NULL)");
-        db.execSQL("CREATE TABLE Products(productId INTEGER PRIMARY KEY AUTOINCREMENT, productImage BLOB NOT NULL, productName TEXT NOT NULL, quantity INTEGER NOT NULL, price INTEGER NOT NULL, productCategory INTEGER NOT NULL, FOREIGN KEY(productCategory) REFERENCES Categories(categoryId))");
         String createAdmin = "INSERT INTO Users (userId, username, fullName, password, confirmPassword, address, email, phone, role) \n" +
                 "VALUES (null, 'admin','Nguyen Toan', '123456', '123456', 'vietnam', 'nguyenvantoan28082001@gmail.com', '0762871115', 'admin')";
         db.execSQL(createAdmin);
         db.execSQL("INSERT INTO Users (userId, username, fullName, password, confirmPassword, address, email, phone)\n" +
                 "VALUES (null, 'nguyentoan','Nguyen Toan', '123456', '123456', 'vietnam', 'nguyenvantoan28082001@gmail.com', '0762871115')");
-
+        db.execSQL("CREATE TABLE Categories(categoryId INTEGER PRIMARY KEY AUTOINCREMENT, categoryImage BLOB NOT NULL, categoryName TEXT NOT NULL)");
+        db.execSQL("CREATE TABLE Products(productId INTEGER PRIMARY KEY AUTOINCREMENT, productImage BLOB NOT NULL, productName TEXT NOT NULL, quantity INTEGER NOT NULL, price INTEGER NOT NULL, productCategory INTEGER NOT NULL, FOREIGN KEY(productCategory) REFERENCES Categories(categoryId))");
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.example.foods.dao;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -85,16 +86,14 @@ public class UserDAO {
     public static boolean checkDuplicateUser(Context context, String username){
         FoodDBContext data = new FoodDBContext(context);
         SQLiteDatabase db = data.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM Users WHERE username=?", new String[]{username});
-        cursor.close();
+        @SuppressLint("Recycle") Cursor cursor = db.rawQuery("SELECT * FROM Users WHERE username=?", new String[]{username});
         return cursor.getCount() > 0;
     }
 
     public static boolean checkLogin(Context context, String username, String password){
         FoodDBContext data = new FoodDBContext(context);
         SQLiteDatabase db = data.getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM Users WHERE username=? and password=?", new String[]{username, password});
-        cursor.close();
+        @SuppressLint("Recycle") Cursor cursor = db.rawQuery("SELECT * FROM Users WHERE username=? and password=?", new String[]{username, password});
         if(cursor.getCount() > 0){
             cursor.moveToFirst();
             int uId;
@@ -118,8 +117,7 @@ public class UserDAO {
     public static boolean isAdmin(Context context, String username, String password){
         FoodDBContext data = new FoodDBContext(context);
         SQLiteDatabase db = data.getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM Users WHERE username=? and password=? and role='admin'", new String[]{username, password});
-        cursor.close();
+        @SuppressLint("Recycle") Cursor cursor = db.rawQuery("SELECT * FROM Users WHERE username=? and password=? and role='admin'", new String[]{username, password});
         return (cursor.getCount() > 0);
     }
 

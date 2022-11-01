@@ -69,5 +69,6 @@ public class AddUserActivity extends AppCompatActivity {
                 }
             }
         });
+        back_admin.setOnClickListener(v -> startActivity(new Intent(AddUserActivity.this, UserManagementActivity.class)));
     }
 }
