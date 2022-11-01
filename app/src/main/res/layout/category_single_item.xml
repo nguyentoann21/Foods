@@ -41,18 +41,20 @@
                 android:hint="@string/category_id"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                android:gravity="center"
-                tools:ignore="TextContrastCheck" />
+                android:gravity="start"
+                android:paddingStart="5dp"
+                tools:ignore="RtlSymmetry,TextContrastCheck" />
 
             <TextView
                 android:id="@+id/txt_category_item_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/category_name"
-                android:gravity="center"
+                android:gravity="start"
+                android:paddingStart="5dp"
                 android:textSize="25sp"
                 android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="RtlSymmetry,TextContrastCheck" />
 
         </LinearLayout>
 

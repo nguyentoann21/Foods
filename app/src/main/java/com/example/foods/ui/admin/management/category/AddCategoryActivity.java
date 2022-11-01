@@ -52,9 +52,11 @@ public class AddCategoryActivity extends AppCompatActivity {
                         categoryImage.getDrawable() != null &&
                         imageToStore != null){
                     boolean checkInsert = CategoryDAO.insertCategory(AddCategoryActivity.this, imageToStore, categoryName.getText().toString());
-                    if(checkInsert)
+                    if(checkInsert) {
                         Toast.makeText(AddCategoryActivity.this, "Add Category is successful", Toast.LENGTH_SHORT).show();
-                    else
+                        startActivity(new Intent(AddCategoryActivity.this, CategoryManagementActivity.class));
+                        finish();
+                    }else
                         Toast.makeText(AddCategoryActivity.this, "Add Category is failed", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(AddCategoryActivity.this, "Please select image or input name", Toast.LENGTH_SHORT).show();

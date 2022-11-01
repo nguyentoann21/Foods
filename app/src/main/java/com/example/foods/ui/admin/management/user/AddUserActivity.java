@@ -55,7 +55,7 @@ public class AddUserActivity extends AppCompatActivity {
                             boolean addUser = UserDAO.insertUser(AddUserActivity.this, user, name, pwd, rePwd, add, mail, numberPhone);
                             if (addUser) {
                                 Toast.makeText(AddUserActivity.this, "Add Successfully", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(AddUserActivity.this, ShowAllUserActivity.class));
+                                startActivity(new Intent(AddUserActivity.this, UserManagementActivity.class));
                                 finish();
                             } else {
                                 Toast.makeText(AddUserActivity.this, "Add Failed", Toast.LENGTH_SHORT).show();

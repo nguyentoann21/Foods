@@ -46,6 +46,8 @@ public class ShowAllCategoryActivity extends AppCompatActivity implements ICateg
         list = CategoryDAO.getAllCategories(ShowAllCategoryActivity.this);
         if(list.size() == 0){
             Toast.makeText(ShowAllCategoryActivity.this, "No data to display", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(ShowAllCategoryActivity.this, AddCategoryActivity.class));
+            finish();
         }else {
             adapter = new ShowCategoryAdapter(ShowAllCategoryActivity.this, list, this);
             recycler.setAdapter(adapter);

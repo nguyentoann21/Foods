@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.foods.R;
 import com.example.foods.adapters.HomeHorizontalAdapter;
 import com.example.foods.adapters.HomeVerticalAdapter;
-import com.example.foods.adapters.IUpdateVerticalRecycle;
+import com.example.foods.interfaces.IUpdateVerticalRecycle;
 import com.example.foods.models.HomeHorizontalModel;
 import com.example.foods.models.HomeVerticalModel;
 import com.example.foods.ui.account.LoginActivity;

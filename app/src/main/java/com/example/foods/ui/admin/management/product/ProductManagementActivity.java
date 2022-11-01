@@ -24,8 +24,8 @@ public class ProductManagementActivity extends AppCompatActivity {
         show = findViewById(R.id.layout_show_product);
         back = findViewById(R.id.layout_product_back);
 
-        add.setOnClickListener(v -> startActivity(new Intent(ProductManagementActivity.this, AddUserActivity.class)));
-        show.setOnClickListener(v -> startActivity(new Intent(ProductManagementActivity.this, ShowAllUserActivity.class)));
+        add.setOnClickListener(v -> startActivity(new Intent(ProductManagementActivity.this, AddProductActivity.class)));
+        show.setOnClickListener(v -> startActivity(new Intent(ProductManagementActivity.this, ShowAllProductActivity.class)));
         back.setOnClickListener(v -> startActivity(new Intent(ProductManagementActivity.this, AdminActivity.class)));
     }
 }

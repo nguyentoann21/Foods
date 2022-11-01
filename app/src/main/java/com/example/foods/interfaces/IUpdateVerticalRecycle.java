@@ -1,4 +1,4 @@
-package com.example.foods.adapters;
+package com.example.foods.interfaces;
 
 import com.example.foods.models.HomeVerticalModel;
 
