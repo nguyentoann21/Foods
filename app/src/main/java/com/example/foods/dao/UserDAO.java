@@ -134,7 +134,6 @@ public class UserDAO {
         FoodDBContext data = new FoodDBContext(context);
         SQLiteDatabase db = data.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM Users WHERE email=? and username=?", new String[]{email, username});
-        cursor.close();
         return cursor.getCount() > 0;
     }
 

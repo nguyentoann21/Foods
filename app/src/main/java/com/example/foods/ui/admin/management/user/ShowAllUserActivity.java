@@ -76,11 +76,15 @@ public class ShowAllUserActivity extends AppCompatActivity {
             user.setEmail(mail.getText().toString());
             user.setPhone(fax.getText().toString());
             if(UserDAO.updateUser(ShowAllUserActivity.this, user)){
-                Toast.makeText(ShowAllUserActivity.this, "Editing user is successful", Toast.LENGTH_SHORT).show();
-                listUser.clear();
-                listUser.addAll(UserDAO.getAllUser(ShowAllUserActivity.this));
-                adapter.notifyDataSetChanged();
-                dialog.dismiss();
+                if(pwd.getText().toString().length() >= 6 && pwd.getText().toString().length()<=20){
+                    Toast.makeText(ShowAllUserActivity.this, "Editing user is successful", Toast.LENGTH_SHORT).show();
+                    listUser.clear();
+                    listUser.addAll(UserDAO.getAllUser(ShowAllUserActivity.this));
+                    adapter.notifyDataSetChanged();
+                    dialog.dismiss();
+                }else{
+                    Toast.makeText(ShowAllUserActivity.this, "The password length must be from 6 to 20 characters", Toast.LENGTH_SHORT).show();
+                }
             }else{
                 Toast.makeText(ShowAllUserActivity.this, "Editing user is failed", Toast.LENGTH_SHORT).show();
             }
